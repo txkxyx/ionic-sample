@@ -1,0 +1,12 @@
+version: "3"
+services: 
+    sample-app:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        tty: true
+        volumes: 
+            - ./app:/src/app
+        ports:
+            - 8100:8100
+        container_name: ionic-docker
